@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Solutions.h" />
+    <ClInclude Include="Arrays.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="interviewQuestions.cpp" />

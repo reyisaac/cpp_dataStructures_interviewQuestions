@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Solutions {
+class Arrays {
 public:
 	//ARRAYS
 	//two sums O(n^2)
@@ -14,7 +14,6 @@ public:
 		for (int i = 0; i < n; ++i)
 		{
 			for (int k = 0; k < n; ++k) {
-				cout << "test" << endl;
 				if (i != k)
 				{
 					if (numList[i] + numList[k] == target) {
@@ -49,5 +48,24 @@ public:
 			else ++i;
 		}
 
+	}
+
+	//max consecutive ones n^2
+	int maxConsecutivesOnes(vector<int>& nums) {
+		int longest = 0;
+		int n = nums.size();
+		for (int i = 0; i < n; ++i) {
+			if (nums[i] == 1)
+			{
+				int temp = 1;
+				int k = i + 1;
+				while (k < n && nums[k] == 1) {
+					++temp;
+					++k;
+				}
+				longest = max(longest, temp);
+			}
+		}
+		return longest;
 	}
 };
