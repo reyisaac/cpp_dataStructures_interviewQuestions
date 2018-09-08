@@ -39,13 +39,13 @@ public:
 		sort(nums2.begin(), nums2.end()); //first step sort the list
 		int i = 0;
 		int k = nums2.size() - 1;
-		while (i > k) {
+		while (i < k) {
 			if (nums2[i].first + nums2[k].first == target) {
-				cout << "[" << i << "][" << k << "]" << endl;
+				cout << "[" << nums2[i].second << "][" << nums2[k].second << "]" << endl;
 				vector<int> temp{ nums2[i].second, nums2[k].second };
 				return temp;
 			}
-			else if (nums2[i].first + nums2[k].first) --k;
+			else if (nums2[i].first + nums2[k].first > target) --k;
 			else ++i;
 		}
 
